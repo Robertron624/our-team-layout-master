@@ -46,9 +46,11 @@ figure, blockquote, dl, dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
+    padding-inline-start: 0;
+    margin: 0;
 }
 
 /* Set core body defaults */
@@ -97,6 +99,10 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* UTILITY CLASSES */
@@ -268,6 +274,36 @@ main {
 
 .container .professionals .photo-container[data-person="liam-novak"] {
     background-color: var(--lavender);
+}
+.container .professionals .photo-container[data-person="sophia-moretti"] {
+    background-color: var(--pink-blush);
+}
+.container .professionals .photo-container[data-person="ethan-rossi"] {
+    background-color: var(--sky-blue);
+}
+.container .professionals .photo-container[data-person="isabella-ricci"] {
+    background-color: var(--peach);
+}
+.container .professionals .photo-container[data-person="noah-conti"] {
+    background-color: var(--mint-green);
+}
+
+.container .professionals .photo-container.empty {
+    background-color: var(--light-gray);
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    border-bottom-left-radius: var(--custom-br-4);
+    border-bottom-right-radius: var(--custom-br-4);
+}
+
+.container .professionals .photo-container.empty .text a span{
+    font-size: .65rem;
+    color: var(--charcoal-gray);
+}
+
+.container .professionals .photo-container.empty img {
+    width: .5rem;
+    margin-left: .25rem;
 }
 
 @media screen and (min-width: 1025px){
