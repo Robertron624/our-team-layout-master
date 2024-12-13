@@ -1,4 +1,3 @@
-
 /* Setting up Outfit font */
 
 @font-face {
@@ -21,7 +20,6 @@
     font-weight: 700;
     font-style: normal;
 }
-
 
 /* CSS RESET */
 
@@ -169,8 +167,6 @@ a {
   padding: 0.25rem;
 }
 
-
-
 /* CUSTOM STYLES */
 
 /* Colors */
@@ -209,6 +205,11 @@ main {
     padding-inline: 1rem;
 }
 
+.container {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
 .container .intro-text{
     background-color: var(--light-gray);
     padding-block:  1.5rem 5rem;
@@ -236,13 +237,15 @@ main {
 
 /* Professionals Cards */
 
+.container .professionals {
+  display: grid;
+}
+
 .container .professionals .photo-container {
     position: relative;
     width: 100%; /* Ajusta según tus necesidades */
-    height: 350px; /* Ajusta según tus necesidades */
     overflow: hidden; /* Evita que el contenido se salga del contenedor */
-    /* background: url('/resources/images/Gradient@2x.png') no-repeat center center;
-    background-size: cover; */
+    aspect-ratio: 1/1; /* Relación de aspecto 1:1 */
 }
 
 .photo-container picture, 
@@ -264,7 +267,9 @@ main {
     display: grid;
     gap: .5rem;
 
-    background: url('/resources/images/Gradient@2x.png') no-repeat center center;
+    background-image: url('/resources/images/Gradient@2x.png');
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 
@@ -310,24 +315,62 @@ main {
 /*------------------------ MEDIA QUERIES -----------------------*/
 
 /*Tablet*/
-@media screen and (min-width: 412px) and (max-width: 1349px){
+@media screen and (min-width: 640px){
   .container .intro-text {
     padding-block-end: 6.5rem;
   }
 
   .professionals {
-    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "person1 person2 person3"
+      "empty person4 person5";
+  }
+
+  .photo-container {
+    grid-area: auto; /* Todos los elementos por defecto usan flujo automático */
+  }
+
+  .photo-container[data-person="liam-novak"] {
+    grid-area: person1;
+  }
+
+  .photo-container[data-person="sophia-moretti"] {
+    grid-area: person2;
+  }
+
+  .photo-container[data-person="ethan-rossi"] {
+    grid-area: person3;
+  }
+
+  .photo-container[data-person="isabella-ricci"] {
+    grid-area: person4;
+  }
+
+  .photo-container[data-person="noah-conti"] {
+    grid-area: person5;
+  }
+
+  .photo-container.empty {
+    grid-area: empty;
   }
 }
 
 /*Desktop*/
-@media screen and (min-width: 1350px){
+@media screen and (min-width: 1025px){
 
     .container .intro-text {
         background-image: url(/resources/images/Background_decor.svg) no-repeat;
     }
 
+    .professionals {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "person1 person2 person3"
+        "person4 person5 empty";
+    }
+
     .photo-container .info {
-        background: url('/resources/images/Gradient.svg') no-repeat center center;
+        background-image: url('/resources/images/Gradient.svg') no-repeat center center;
     }
 }
