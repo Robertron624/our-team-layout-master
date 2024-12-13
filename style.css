@@ -231,6 +231,7 @@ main {
 
 .container .intro-text p:not(.our-team) {
     color: var(--charcoal-gray);
+    margin-top: 1.5rem;
 }
 
 /* Professionals Cards */
@@ -306,7 +307,21 @@ main {
     margin-left: .25rem;
 }
 
-@media screen and (min-width: 1025px){
+/*------------------------ MEDIA QUERIES -----------------------*/
+
+/*Tablet*/
+@media screen and (min-width: 412px) and (max-width: 1349px){
+  .container .intro-text {
+    padding-block-end: 6.5rem;
+  }
+
+  .professionals {
+    display: grid;
+  }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1350px){
 
     .container .intro-text {
         background-image: url(/resources/images/Background_decor.svg) no-repeat;
