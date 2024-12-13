@@ -323,12 +323,17 @@ main {
   .professionals {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
+      "intro-text intro-text intro-text"
       "person1 person2 person3"
       "empty person4 person5";
   }
 
   .photo-container {
     grid-area: auto; /* Todos los elementos por defecto usan flujo automático */
+  }
+
+  .intro-text {
+    grid-area: intro-text; /* Ubicar .intro-text en el área definida */
   }
 
   .photo-container[data-person="liam-novak"] {
@@ -349,10 +354,12 @@ main {
 
   .photo-container[data-person="noah-conti"] {
     grid-area: person5;
+    border-bottom-right-radius: var(--custom-br-4);
   }
 
   .photo-container.empty {
     grid-area: empty;
+    border-bottom-right-radius: 0px !important;
   }
 }
 
@@ -360,7 +367,7 @@ main {
 @media screen and (min-width: 1025px){
 
     .container .intro-text {
-        background-image: url(/resources/images/Background_decor.svg) no-repeat;
+        background-image: url(/resources/images/Background_decor.svg);
     }
 
     .professionals {
@@ -370,7 +377,26 @@ main {
         "person4 person5 empty";
     }
 
+    .professionals {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+      grid-template-areas:
+        "intro-text intro-text person1 person2" /* Primera fila */
+        "empty person3 person4 person5";       /* Segunda fila */
+    }
+  
+    .intro-text {
+      grid-area: intro-text;
+      background-image: url('/resources/images/Background_decor.svg');
+      background-repeat: no-repeat;
+      padding-block: 1.5rem 0px !important;
+    }
+  
     .photo-container .info {
-        background-image: url('/resources/images/Gradient.svg') no-repeat center center;
+      background-image: url('/resources/images/Gradient.svg');
+    }
+
+    .photo-container[data-person="sophia-moretti"] {
+      border-top-right-radius: var(--custom-br-4);
     }
 }
