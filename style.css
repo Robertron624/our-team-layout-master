@@ -1,24 +1,24 @@
 /* Setting up Outfit font */
 
 @font-face {
-  font-family: 'Outfit';
-  src: url('./resources/fonts/Outfit-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Outfit";
+  src: url("./resources/fonts/Outfit-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('./resources/fonts/Outfit-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Outfit";
+  src: url("./resources/fonts/Outfit-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Outfit';
-    src: url('./resources/fonts/Outfit-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Outfit";
+  src: url("./resources/fonts/Outfit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* CSS RESET */
@@ -38,8 +38,16 @@ html {
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin-block-end: 0;
 }
 
@@ -47,8 +55,8 @@ figure, blockquote, dl, dd {
 ul,
 ol {
   list-style: none;
-    padding-inline-start: 0;
-    margin: 0;
+  padding-inline-start: 0;
+  margin: 0;
 }
 
 /* Set core body defaults */
@@ -58,14 +66,21 @@ body {
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
   line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-wrap: balance;
 }
 
@@ -83,8 +98,10 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
+input,
+button,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
 }
@@ -100,7 +117,7 @@ textarea:not([rows]) {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* UTILITY CLASSES */
@@ -171,38 +188,38 @@ a {
 
 /* Colors */
 :root {
-    --almost-white: #FFFEFE; /* Casi blanco */
-    --light-gray: #F3F4F6; /* Gris claro */
-    --charcoal-gray: #394150; /* Gris carbón */
-    --pure-black: #000000; /* Negro puro */
-    --royal-blue: #263FA9; /* Azul real */
-    --mint-green: #86E7D4; /* Verde menta */
-    --sky-blue: #9DC4F8; /* Azul cielo */
-    --lavender: #C1B6F8; /* Lavanda */
-    --pink-blush: #EDACD2; /* Rosa rubor */
-    --peach: #F8D8B0; /* Durazno */
+  --almost-white: #fffefe; /* Casi blanco */
+  --light-gray: #f3f4f6; /* Gris claro */
+  --charcoal-gray: #394150; /* Gris carbón */
+  --pure-black: #000000; /* Negro puro */
+  --royal-blue: #263fa9; /* Azul real */
+  --mint-green: #86e7d4; /* Verde menta */
+  --sky-blue: #9dc4f8; /* Azul cielo */
+  --lavender: #c1b6f8; /* Lavanda */
+  --pink-blush: #edacd2; /* Rosa rubor */
+  --peach: #f8d8b0; /* Durazno */
 
-    /* Containers */
-    --custom-br-1: .25rem;
-    --custom-br-2: .5rem;
-    --custom-br-2: .75rem;
-    --custom-br-3: 1rem;
-    --custom-br-4: 1.25rem;
-    --custom-br-5: 1.5rem;
+  /* Containers */
+  --custom-br-1: 0.25rem;
+  --custom-br-2: 0.5rem;
+  --custom-br-2: 0.75rem;
+  --custom-br-3: 1rem;
+  --custom-br-4: 1.25rem;
+  --custom-br-5: 1.5rem;
 }
 
 body {
-    /* Fonts */
-    font-family: 'Outfit', sans-serif, Arial, Helvetica;
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: var(--almost-white);
-    color: var(--pure-black);
+  /* Fonts */
+  font-family: "Outfit", sans-serif, Arial, Helvetica;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--almost-white);
+  color: var(--pure-black);
 }
 
 main {
-    padding-block: 2rem;
-    padding-inline: 1rem;
+  padding-block: 2rem;
+  padding-inline: 1rem;
 }
 
 .container {
@@ -210,29 +227,30 @@ main {
   margin-inline: auto;
 }
 
-.container .intro-text{
-    background-color: var(--light-gray);
-    padding-block:  1.5rem 5rem;
-    padding-inline: 1.25rem;
-    border-top-left-radius: var(--custom-br-4);
-    border-top-right-radius: var(--custom-br-4);
-    background-image: url('./resources/images/Background_decor@2x.png');
-    background-repeat: no-repeat;
-    background-position: left 2%;
+.container .intro-text {
+  background-color: var(--light-gray);
+  padding-block: 1.5rem 5rem;
+  padding-inline: 1.25rem;
+  border-top-left-radius: var(--custom-br-4);
+  border-top-right-radius: var(--custom-br-4);
+
+  background-image: url("./resources/images/Background_decor@2x.png");
+  background-repeat: no-repeat;
+  background-position: left 2%;
 }
 
 .container .intro-text .our-team {
-    color: var(--royal-blue);
+  color: var(--royal-blue);
 }
 
 .container .intro-text h1 {
-    font-size:  2.5rem; /* 40px*/
-    margin-top: 1rem;
+  font-size: 2.5rem; /* 40px*/
+  margin-top: 1rem;
 }
 
 .container .intro-text p:not(.our-team) {
-    color: var(--charcoal-gray);
-    margin-top: 1.5rem;
+  color: var(--charcoal-gray);
+  margin-top: 1.5rem;
 }
 
 /* Professionals Cards */
@@ -242,13 +260,13 @@ main {
 }
 
 .container .professionals .photo-container {
-    position: relative;
-    width: 100%; /* Ajusta según tus necesidades */
-    overflow: hidden; /* Evita que el contenido se salga del contenedor */
-    aspect-ratio: 1/1; /* Relación de aspecto 1:1 */
+  position: relative;
+  width: 100%; /* Ajusta según tus necesidades */
+  overflow: hidden; /* Evita que el contenido se salga del contenedor */
+  aspect-ratio: 1/1; /* Relación de aspecto 1:1 */
 }
 
-.photo-container picture, 
+.photo-container picture,
 .photo-container img {
   display: block;
   width: 100%;
@@ -257,79 +275,76 @@ main {
 }
 
 .photo-container .info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: var(--almost-white);
-    padding: 1rem 1rem 2rem 1.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    display: grid;
-    gap: .5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: var(--almost-white);
+  padding: 1rem 1rem 2rem 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: grid;
+  gap: 0.5rem;
 
-    background-image: url('/resources/images/Gradient@2x.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+  background-image: url("/resources/images/Gradient@2x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .photo-container .info h2 {
-    font-weight: 600;
-    font-size: 1.25rem;
+  font-weight: 600;
+  font-size: 1.25rem;
 }
 
 .container .professionals .photo-container[data-person="liam-novak"] {
-    background-color: var(--lavender);
+  background-color: var(--lavender);
 }
 .container .professionals .photo-container[data-person="sophia-moretti"] {
-    background-color: var(--pink-blush);
+  background-color: var(--pink-blush);
 }
 .container .professionals .photo-container[data-person="ethan-rossi"] {
-    background-color: var(--sky-blue);
+  background-color: var(--sky-blue);
 }
 .container .professionals .photo-container[data-person="isabella-ricci"] {
-    background-color: var(--peach);
+  background-color: var(--peach);
 }
 .container .professionals .photo-container[data-person="noah-conti"] {
-    background-color: var(--mint-green);
+  background-color: var(--mint-green);
 }
 
 .container .professionals .photo-container.empty {
-    background-color: var(--light-gray);
-    padding-bottom: 1.5rem;
-    padding-left: 1.5rem;
-    border-bottom-left-radius: var(--custom-br-4);
-    border-bottom-right-radius: var(--custom-br-4);
+  background-color: var(--light-gray);
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  border-bottom-left-radius: var(--custom-br-4);
+  border-bottom-right-radius: var(--custom-br-4);
 }
 
-.container .professionals .photo-container.empty .text a span{
-    font-size: .65rem;
-    color: var(--charcoal-gray);
+.container .professionals .photo-container.empty .text a span {
+  font-size: 0.65rem;
+  color: var(--charcoal-gray);
 }
 
 .container .professionals .photo-container.empty img {
-    width: .5rem;
-    margin-left: .25rem;
+  width: 0.5rem;
+  margin-left: 0.25rem;
 }
 
 /*------------------------ MEDIA QUERIES -----------------------*/
 
 /*Tablet*/
-@media screen and (min-width: 640px){
+@media screen and (min-width: 640px) {
   .container .intro-text {
     padding-block-end: 6.5rem;
   }
 
   .professionals {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       "intro-text intro-text intro-text"
       "person1 person2 person3"
       "empty person4 person5";
-  }
-
-  .photo-container {
-    grid-area: auto; /* Todos los elementos por defecto usan flujo automático */
   }
 
   .intro-text {
@@ -364,39 +379,35 @@ main {
 }
 
 /*Desktop*/
-@media screen and (min-width: 1025px){
+@media screen and (min-width: 1025px) {
+  .container .professionals {
+    position: relative;
+  }
 
-    .container .intro-text {
-        background-image: url(/resources/images/Background_decor.svg);
-    }
+  .container .intro-text {
+    border-top-right-radius: 0px;
+    padding-block: 1.5rem 0px !important;
+    background-image: url(/resources/images/Background_decor.svg);
+    background-size: 18rem;
+    background-position: .4rem -4rem;
+  }
 
-    .professionals {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-        "person1 person2 person3"
-        "person4 person5 empty";
-    }
+  .professionals {
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    grid-template-rows: auto auto; /* Dos filas */
+    grid-template-areas:
+      "intro-text intro-text person1 person2" /* Primera fila */
+      "empty person3 person4 person5"; /* Segunda fila */
+  }
 
-    .professionals {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
-      grid-template-areas:
-        "intro-text intro-text person1 person2" /* Primera fila */
-        "empty person3 person4 person5";       /* Segunda fila */
-    }
-  
-    .intro-text {
-      grid-area: intro-text;
-      background-image: url('/resources/images/Background_decor.svg');
-      background-repeat: no-repeat;
-      padding-block: 1.5rem 0px !important;
-    }
-  
-    .photo-container .info {
-      background-image: url('/resources/images/Gradient.svg');
-    }
+  .professionals .photo-container.empty {
+    background-image: url(/resources/images/Background_decor.svg);
+    background-repeat: no-repeat;
+    background-size: 20rem;
+    background-position: -1.65rem -26rem;
+  }
 
-    .photo-container[data-person="sophia-moretti"] {
-      border-top-right-radius: var(--custom-br-4);
-    }
+  .photo-container[data-person="sophia-moretti"] {
+    border-top-right-radius: var(--custom-br-4);
+  }
 }
