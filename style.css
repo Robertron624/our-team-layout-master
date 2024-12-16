@@ -320,14 +320,16 @@ main {
   border-bottom-right-radius: var(--custom-br-4);
 }
 
-.container .professionals .photo-container.empty .text a span {
+.container .professionals .photo-container.empty .text a {
   font-size: 0.65rem;
   color: var(--charcoal-gray);
+  transition: color .4s ease-in-out;
 }
 
-.container .professionals .photo-container.empty img {
+.container .professionals .photo-container.empty svg {
   width: 0.5rem;
   margin-left: 0.25rem;
+  color: var(--charcoal-gray);
 }
 
 /*------------------------ MEDIA QUERIES -----------------------*/
@@ -409,5 +411,23 @@ main {
 
   .photo-container[data-person="sophia-moretti"] {
     border-top-right-radius: var(--custom-br-4);
+  }
+
+  .container .professionals .photo-container.empty .text a {
+    font-size: 1rem;
+  }
+
+
+  .container .professionals .photo-container.empty .text a:hover svg,
+  .container .professionals .photo-container.empty .text a:hover {
+    color: var(--royal-blue);
+  }
+
+  .container .professionals .photo-container.empty img {
+    width: 1rem;
+  }
+
+  .container .professionals .photo-container.empty .text a svg {
+    width: 1rem;
   }
 }
